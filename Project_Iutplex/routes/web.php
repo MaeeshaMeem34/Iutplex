@@ -25,3 +25,6 @@ Route::get('/Contacts', 'PagesController@Contacts');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'PagesController@saveregister');
+
+Route::post('/save_register', 'PagesController@save_register');
