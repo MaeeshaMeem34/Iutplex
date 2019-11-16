@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.newapp')
 
 @section('title')
    movie info
@@ -10,52 +10,42 @@
    </div>
 
 
+   <div class="">
+     <form method="post"  action="{{ route('movie-info-submit')}}">
+         @csrf
 
-   <form method="post"  action="{{ route('movie-info-submit')}}">
-       @csrf
+         <div class="form-group">
 
+             <label for="name">Movie Name</label>
+             <input type="text" class="form-control" name="name" id="name" >
 
-       <div class="form-group">
+         </div>
 
-           <label for="name">Movie Name</label>
-           <input type="text" class="form-control" name="name" id="name" >
+         <div class="form-group">
 
-       </div>
+             <label for="Directorname">Director name</label>
+             <input type="text" class="form-control" name="Directorname" id="Directorname" >
 
-       <div class="form-group">
+         </div>
 
-           <label for="Directorname">Director name</label>
-           <input type="text" class="form-control" name="Directorname" id="Directorname" >
+         <div class="form-group">
 
-       </div>
+             <label for="Duration">Duration</label>
+             <input type="text" class="form-control" name="Duration" id="Duration" >
 
-       <div class="form-group">
+         </div>
 
-           <label for="Duration">Duration</label>
-           <input type="text" class="form-control" name="Duration" id="Duration" >
+         <div class="form-group">
 
-       </div>
+            <label for="Description">Description</label>
+            <input type="text" class="form-control" name="Description" id="Description" >
 
-       <div class="form-group">
+         </div>
 
-           <label for="Description">Description</label>
-           <input type="text" class="form-control" name="Description" id="Description" >
+         <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+   </div>
 
-       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
 
 @endsection
